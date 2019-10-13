@@ -1,0 +1,10 @@
+node {
+   stagae('SCM Checkout'){
+     git 'https://github.com/pampanoor/my-app'
+   }
+   
+   stage('Compile-Package'){
+     sh 'mvn Package'
+   
+   }
+}
