@@ -1,10 +1,5 @@
 node {
-   stagae('SCM Checkout'){
-     git 'https://github.com/pampanoor/my-app'
-   } 
-   stage('Compile-Package'){
-     // Get maven home path
-     def MvnHome = tool name: 'mavenHomepath', type: 'maven'
-     sh "${MvnHome}/bin/mvn package"
-     }
+   stage ('Scm Checkout'){
+      git 'https://github.com/pampanoor/my-app'
    }
+}
