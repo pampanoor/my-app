@@ -12,3 +12,4 @@ node {
 			sh "${mvnhome}/bin/mvn sonar:sonar"
 	   }
    }
+}
