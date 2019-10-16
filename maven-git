@@ -3,8 +3,8 @@ node {
       git 'https://github.com/pampanoor/my-app'
    }
  stage('Mvn Package'){
-	   // Build using maven
-	   
-	   sh "${mvn} clean package deploy"
+	   // Get maven home path
+	   def mvnHome = /usr/share/maven
+	   sg "$ {mvn-package}/bin/mvn package"
    }
 }
