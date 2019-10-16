@@ -2,8 +2,7 @@ node {
    stage ('Scm Checkout'){
       git 'https://github.com/pampanoor/my-app'
    }
-   stage('Maven Package'){
-      def mvnHome = /usr/share/maven
-      sh "$mvnHome/bin/mvn package"
+   stage('Compile-Package'){
+       sh "/usr/share/maven/bin/mvn clean package"
    }
 }
