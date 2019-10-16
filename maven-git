@@ -11,5 +11,14 @@ node {
 	   withSonarQubeEnv('sonar-1'){
 			sh "${mvnhome}/bin/mvn sonar:sonar"
 	   }
+	stage ('slack Notification'){
+	   slackSend baseUrl: 'https://hooks.slack.com/services/',
+	   channel: 'jenkinspipeline-channel',
+	   color: 'good', teamDomain: 'pampanoor',
+	   tokenCredentialId: 'slack-credential',
+	   username: 'slack-user'
+	}   
+	   
    }
-}
+   }  
+   }
