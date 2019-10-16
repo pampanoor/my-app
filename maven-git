@@ -3,6 +3,7 @@ node {
       git 'https://github.com/pampanoor/my-app'
    }
    stage('Compile-Package'){
-       sh "/usr/share/maven/bin/mvn clean package"
+   def mvnhome="/usr/share/maven"
+       sh "${mvnhome}/bin/mvn clean package"
    }
 }
