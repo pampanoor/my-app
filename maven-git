@@ -3,7 +3,7 @@ node {
       git 'https://github.com/pampanoor/my-app'
    }
    stage('Maven Package'){
-      def 'mvnHome = /usr/share/maven'
+      def mvnHome = /usr/share/maven
       sh "$mvnHome/bin/mvn package"
    }
 }
