@@ -2,7 +2,9 @@ node {
    stage ('Scm Checkout'){
       git 'https://github.com/pampanoor/my-app'
    }
-   stage ('Compile-Package'){
-      sh 'mvn package'
+ stage('Mvn Package'){
+	   // Build using maven
+	   
+	   sh "${mvn} clean package deploy"
    }
 }
