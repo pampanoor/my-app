@@ -1,0 +1,5 @@
+node {
+  stage('Scm Checkout'){
+    git 'https://github.com/pampanoor/my-app'
+  }
+}
