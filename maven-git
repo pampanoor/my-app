@@ -6,4 +6,7 @@ node {
    def mvnhome="/usr/share/maven"
        sh "${mvnhome}/bin/mvn clean package"
    }
+   stage(
+   }  
+   
 }
