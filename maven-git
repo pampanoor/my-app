@@ -6,7 +6,9 @@ node {
    def mvnhome="/usr/share/maven"
        sh "${mvnhome}/bin/mvn clean package"
    }
-   stage(
-   }  
-   
-}
+   stage('SonarQube Analysis'){
+   def mvnhome="/usr/share/maven"
+	   withSonarQubeEnv('sonar-1'){
+			sh "${mvnhome}/bin/mvn sonar:sonar"
+	   }
+   }
