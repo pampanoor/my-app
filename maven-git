@@ -3,8 +3,7 @@ node {
       git 'https://github.com/pampanoor/my-app'
    }
  stage('Compile-Package'){
-	   // Get maven home path
-	   def mvnHome = /usr/share/maven
+	   // Get maven home path def mvnHome = /usr/share/maven
 	   sh "${mvnHome}/bin/mvn package"
    }
 }
